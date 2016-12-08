@@ -6,24 +6,49 @@ class CommentBoard extends Component {
     super(props);
 
     this.state = {
-      comments: [
-        'This is a comment',
-        'This is also a comment',
-        'Lincoln is so sexy',
-        'Who wrote that??'
-      ]
+      comments: []
     }
+  }
+  addComment(newComment) {
+    let comments = this.state.comments;
+    comments.push(newComment);
+    this.setState({comments: comments})
+  }
+
+  removeComment(index) {
+    let comments = this.state.comments;
+    comments.splice(index, 1);
+    this.setState({comments: comments})
+  }
+
+  saveComment(newText, index) {
+    let comments = this.state.comments;
+    comments[index] = newText;
+    this.setState({comments: comments})
   }
 
   render() {
-    const commentsArr = this.state.comments.map((comment, index) =>{
+    const commentsArr = this.state.comments.map((comment, index) => {
       return (
-        <Comment key={index}>{comment}</Comment>
+        <Comment
+          key={index}
+          index={index}
+          updateComment={this.saveComment.bind(this)}
+          deleteComment={this.removeComment.bind(this)}
+          >
+          {comment}
+        </Comment>
       )
     })
 
     return (
       <div className='comment-board'>
+        <button
+          className="btn btn-default btn-info"
+          onClick={this.addComment.bind(this, 'New Message')}
+        >
+          Add New Message
+        </button>
         {commentsArr}
       </div>
     )

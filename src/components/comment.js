@@ -14,12 +14,12 @@ class Comment extends Component {
   }
   save() {
     let val = this.refs.newText.value
-    console.log('new comment', val);
+    this.props.updateComment(val, this.props.index)
     this.setState({editing: false})
   }
 
   remove() {
-    console.log("Removed comment");
+    this.props.deleteComment(this.props.index)
   }
 
   renderComment() {
@@ -33,7 +33,7 @@ class Comment extends Component {
         </button>
         <button
           className="btn btn-default btn-danger"
-          onClick={this.remove}>
+          onClick={this.remove.bind(this)}>
           Remove
         </button>
       </div>
@@ -52,11 +52,7 @@ class Comment extends Component {
           onClick={this.save.bind(this)}>
           Save
         </button>
-        <button
-          className="btn btn-default btn-danger"
-          onClick={this.remove}>
-          Remove
-        </button>
+
       </div>
     )
   }

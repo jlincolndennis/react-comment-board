@@ -8,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello, React!</h1>
+        <h1>React Message Board!</h1>
         <CommentBoard />
-        
+
       </div>
     )
   }
