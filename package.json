@@ -1,0 +1,33 @@
+{
+  "name": "comment-board-app",
+  "version": "1.0.0",
+  "description": "A comment board app made with React",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test"
+  },
+  "repository": "git@github.com/jlincolndennis/react-comment-board.git",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlincolndennis/react-comment-board/issues"
+  },
+  "homepage": "https://github.com/jlincolndennis/react-comment-board#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.8.3",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "babel-preset-stage-1": "^6.16.0",
+    "lodash": "^4.17.2",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
