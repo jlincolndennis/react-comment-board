@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Comment from './components/comment';
+import CommentBoard from './components/comment_board';
 
 class App extends Component {
 
@@ -8,7 +9,8 @@ class App extends Component {
     return (
       <div>
         <h1>Hello, React!</h1>
-        <Comment>This is a comment! Woo!</Comment>
+        <CommentBoard />
+        
       </div>
     )
   }
