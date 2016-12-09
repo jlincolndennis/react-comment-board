@@ -42,9 +42,9 @@ class CommentBoard extends Component {
     })
 
     return (
-      <div className='comment-board'>
+      <div className='comment-board col-md-4'>
         <button
-          className="btn btn-default btn-info"
+          className="btn btn-default btn-info btn-block"
           onClick={this.addComment.bind(this, 'New Message')}
         >
           Add New Message

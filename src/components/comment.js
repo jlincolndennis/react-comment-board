@@ -43,10 +43,10 @@ class Comment extends Component {
   renderForm() {
     return (
       <div className="comment-box">
-        <textarea
-          className="comment-textarea"
+        <input
+          className="comment-input"
           ref="newText"
-          defaultValue={this.props.children}></textarea>
+          defaultValue={this.props.children}></input>
         <button
           className="btn btn-default btn-success"
           onClick={this.save.bind(this)}>

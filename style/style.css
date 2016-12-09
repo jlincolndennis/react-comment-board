@@ -1,0 +1,34 @@
+.comment-board {
+  background-color: dodgerblue;
+  padding: 25px;
+  border: 1px solid black;
+
+}
+
+.comment-box {
+  background-color: white;
+  clear: both;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.comment-text {
+  font-size: 1.25em;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.btn {
+  margin: 5px;
+  text-shadow: 0 0 0;
+}
+
+.comment-input {
+  font-size: 1.25em;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
